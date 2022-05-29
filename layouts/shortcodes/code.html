@@ -1,9 +1,10 @@
 {{ $id := delimit (shuffle (seq 1 9)) "" }}
 
 {{ if .Get "language" }}
+  {{/* <div {{ if .Get "nocollapse" }}{{ else }}class="collapsable-code"{{ end }}}}> */}}
   <div class="collapsable-code">
-    <input id="{{ .Get "id" | default $id }}" type="checkbox" {{ if ( eq ( .Get "isCollapsed" ) "true" ) -}} checked {{- end }} />
-    <label for="{{ .Get "id" | default $id }}">
+    <input {{ if .Get "nocollapse" }}disabled{{ end }} id="{{ .Get "id" | default $id }}" type="checkbox" {{ if ( eq ( .Get "isCollapsed" ) "true" ) -}} checked {{- end }} />
+    <label {{ if .Get "nocollapse" }}style="cursor: auto"{{ end }} for="{{ .Get "id" | default $id }}">
       <span class="collapsable-code__language">{{ .Get "language" }}</span>
       {{ if .Get "title" }}<span class="collapsable-code__title">{{ .Get "title" | markdownify }}</span>{{ end }}
       <span class="collapsable-code__toggle" data-label-expand="{{ .Get "expand" | default "△" }}" data-label-collapse="{{ .Get "collapse" | default "▽" }}"></span>
