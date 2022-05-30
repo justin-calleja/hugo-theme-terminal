@@ -5,11 +5,12 @@
     </div>
   {{ end }}
   <div class="series post">
-    <h1 class="mt-0">All Series</h1>
+    <h1 class="mt-0">Days of Go</h1>
     <ul>
     {{ range .Pages }}
-      <li>
+      <li class="mt-2">
         <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        <span>{{ .Summary }}</span>
       </li>
     {{ end }}
     </ul>

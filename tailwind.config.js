@@ -8,4 +8,5 @@ module.exports = {
   // https://tailwindcss.com/docs/configuration#core-plugins
   // to find a list of available corePlugins.
   corePlugins: ["alignSelf", "display", "height", "margin", "width"],
+  important: true,
 };
