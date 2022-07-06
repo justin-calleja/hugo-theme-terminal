@@ -2,10 +2,13 @@
   "parser": "babel",
   "printWidth": 100,
   "trailingComma": "all",
-  "overrides": [{
-    "files": ".html",
-    "options": {
-      "parser": "html"
+  "singleQuote": false,
+  "overrides": [
+    {
+      "files": ".html",
+      "options": {
+        "parser": "html"
+      }
     }
-  }]
+  ]
 }

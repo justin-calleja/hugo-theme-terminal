@@ -16,9 +16,6 @@ rules:
   arrow-parens:
     - 2
     - as-needed
-  semi:
-    - 2
-    - never
   class-methods-use-this: 0
   comma-dangle:
     - 2
@@ -31,10 +28,6 @@ rules:
     - props: false
   no-useless-escape: 0
   func-names: 0
-  quotes:
-    - 2
-    - single
-    - allowTemplateLiterals: true
   no-underscore-dangle: 0
   object-curly-newline: 0
   function-paren-newline: 0
